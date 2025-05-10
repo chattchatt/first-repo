@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>튀어오르는 공 애니메이션</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 300px;
+            outline: 10px solid #333;
+            margin: 50px auto;
+        }
+
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: #e74c3c;
+            border-radius: 50%;
+            /* animation 축약형 사용 */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode */
+            animation: bounce 1s cubic-bezier(0.36, 0, 0.66, .45) 0s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(250px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform 예제</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .translate:hover {
+            transform: translate(50px, 50px);
+        }
+
+        .scale:hover {
+            transform: scale(1.5);
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        .skew:hover {
+            transform: skew(20deg);
+        }
+
+        .matrix:hover {
+            transform: matrix(1, 0.5, -0.5, 1, 50, 50);
+        }
+
+        .label {
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="box translate"></div>
+            <div class="label">translate</div>
+        </div>
+        <div>
+            <div class="box scale"></div>
+            <div class="label">scale</div>
+        </div>
+        <div>
+            <div class="box rotate"></div>
+            <div class="label">rotate</div>
+        </div>
+        <div>
+            <div class="box skew"></div>
+            <div class="label">skew</div>
+        </div>
+        <div>
+            <div class="box matrix"></div>
+            <div class="label">matrix</div>
+        </div>
+    </div>
+</body>
+</html>
